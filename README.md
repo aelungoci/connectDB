@@ -5,7 +5,7 @@
  - Automatically updated.
  - By the moment, app only avaliable on Linux.
 
-> Using WordPress REST API, JavaScript and PHP
+> Using WordPress REST API, JavaScript, PHP and MySQL
 
 #
 
