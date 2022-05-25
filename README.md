@@ -1,6 +1,6 @@
 # connectDB
 #### Simplifies the way you manage posts
-Keep records of any post from any WordPress site.
+Keep records of any post from any WordPress site with no authentication.
  - All posts.
  - Automatically updated.
  - Local database.
