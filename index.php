@@ -19,21 +19,21 @@
             <input type="text" id="contenido" name="contenido" hidden>
         </form>
     <script>
-        //Recuperamos los datos de la API en un JSON
+        // Recuperamos los datos de la API en un JSON
         let datos = '';
         fetch('https://localhost/colegio/wp-json/wp/v2/posts?per_page=1')
             .then(result => result.json())
             .then((output) => {
-                //Asignamos los datos del JSON a una variable
+                // Asignamos los datos del JSON a una variable
                 datos = output;
                 
-                //Introducimos en el formulario los datos a insertar en la BD
+                // Introducimos en el formulario los datos a insertar en la BD
                 document.getElementById("titulo").value = datos[0]['title']['rendered'];
                 document.getElementById("contenido").value = datos[0]['content']['rendered'];
 
         }).catch(err => console.error(err));
 
-        //Enviamos el formulario, esperando 1s
+        // Enviamos el formulario, esperando 1s
         function enviarFormulario() {
             document.getElementById("form").submit(); 
         }

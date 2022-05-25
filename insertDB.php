@@ -1,11 +1,11 @@
 <?php
 	include 'database.php';
-	// Check connection
+	// Comprobar conexión
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
      }
 
-     //Obtenemos el título del post y el contenido
+     // Obtenemos el título del post y el contenido
      $titulo = $_POST['titulo'];
      
      $contenido = strip_tags($_POST['contenido']);
@@ -18,7 +18,7 @@
         echo "Error: " . $sql . "" . mysqli_error($conn);
      }
 
-     //Si no existe, insertamos el post
+     // Si no existe, insertamos el post
      if(empty($fila['titulo'])) {
         $sql = "INSERT INTO info(titulo, contenido) VALUES ('$titulo','$contenido')";
 
@@ -29,7 +29,7 @@
         }
         $conn->close();
     }else{
-        //En caso de existir mostramos un error
+        // En caso de existir mostramos un error
         echo "El post ya existe en la BD";
     }
 ?>
