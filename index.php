@@ -21,7 +21,7 @@
     <script>
         // Recuperamos los datos de la API en un JSON
         let datos = '';
-        fetch('https://localhost/colegio/wp-json/wp/v2/posts?per_page=1')
+        fetch('https://localhost/colegio/wp-json/wp/v2/posts')
             .then(result => result.json())
             .then((output) => {
                 // Asignamos los datos del JSON a una variable
